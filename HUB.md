@@ -25,10 +25,11 @@ Seeding happens at the **raw layer** — the first ingestion layer — never at 
 synthesis layer.
 
 1. Scaffold the sibling folder from this kit.
-2. From the top-level `raw/INDEX.md`, pick the sources relevant to the segment.
+2. From the top-level `sources.yml` (or its `raw/INDEX.md` view), pick the sources
+   relevant to the segment.
 3. **Copy the whole source documents** into the segment's `raw/`, and register each in
-   the segment's `raw/INDEX.md` with provenance pointing at the master catalog entry
-   (id + version/date).
+   the segment's `sources.yml` — then regenerate its `raw/INDEX.md` view — with provenance
+   pointing at the master catalog entry (id + version/date).
 4. Run Ingest in the segment wiki. Its entity/concept pages emerge from its own reading
    of the sources.
 
