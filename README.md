@@ -58,18 +58,26 @@ HUB.md             — the multi-project extension: segmenting, seeding, retriev
 SCHEMA.md          — the wiki's operating manual (conventions + Ingest/Query/Lint)
 ROADMAP.md         — process spine template (sequencing + spec index)
 specs/             — per-feature build-contract templates
-raw/INDEX.md       — source catalog template (provenance ledger)
+sources.yml        — the editable source catalog (structured — you edit this)
+raw/INDEX.md       — generated, human-readable view of sources.yml (DO-NOT-EDIT)
 wiki/              — starter registers: index, decisions, open questions, requirements
 .wiki/             — operational logs (ingest log, lint reports)
 ```
+
+**Generated files.** `SCHEMA.md` and `raw/INDEX.md` carry DO-NOT-EDIT banners naming
+`_engine/` scripts (`gen-schema` / `gen-sources`). Those scripts live in the generating
+hub (see `HUB.md`), not in this kit. Cloning a single wiki, you have two choices: adopt the
+hub engine, or treat the banners as provenance and edit the real homes by hand —
+`schema.config.md` for the schema, `sources.yml` for the catalog.
 
 ## Quickstart
 
 1. Copy this kit into a new folder — one per project/segment.
 2. Fill in the **Project config** block at the top of `SCHEMA.md`.
-3. Drop your sources into `raw/` and register each in `raw/INDEX.md`.
-   Seeding from a parent program? Copy the relevant **whole source documents** from the
-   top-level `raw/` (see `HUB.md` for why whole docs beat excerpts).
+3. Drop your sources into `raw/` and register each in `sources.yml` (`raw/INDEX.md` is
+   its generated view — regenerate it after). Seeding from a parent program? Copy the
+   relevant **whole source documents** from the top-level `raw/` (see `HUB.md` for why
+   whole docs beat excerpts).
 4. Point your LLM agent at `SCHEMA.md` and run **Ingest** on each source.
 5. Let the entity/concept page set emerge from your sources — don't force another
    project's page structure onto a new domain.

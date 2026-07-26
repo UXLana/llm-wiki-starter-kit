@@ -1,3 +1,6 @@
+<!-- DO NOT EDIT — generated view of sources.yml (the editable source catalog).
+     Edit sources.yml, then regenerate: node _engine/gen-sources.mjs -->
+
 # raw/ INDEX — source catalog
 
 Every file in `raw/` is registered here. Sources are **immutable** — never edited, only

@@ -1,0 +1,51 @@
+# GENERATED-ADJACENT: this is the editable source registry.
+# raw/INDEX.md is its generated view. After editing, run: node _engine/gen-sources.mjs
+#
+# Example of a SEEDED entry — a raw/ copy of a parent program wiki's source
+# (uncomment + adapt when this wiki is seeded from a program catalog; see HUB.md):
+#
+#   - id: brand-guidelines
+#     source_raw: |-
+#       [`brand-guidelines.pdf`](brand-guidelines.pdf)
+#     added: 2026-01-15
+#     provenance: |-
+#       Program catalog `brand-guidelines@v2` (seeded)
+#     notes: |-
+#       Immutable copy of the program's brand source; decisions extracted from it are
+#       authored once at program level and linked, never re-authored here.
+#     path: raw/brand-guidelines.pdf
+#     level: program
+#     version: v2
+#     seeded_from:
+#       wiki: <program wiki>
+#       source_id: brand-guidelines
+#       at_version: v2
+columns:
+  - Id:id
+  - File:source_raw
+  - Date:added
+  - Provenance:provenance
+  - Supersedes / notes:notes
+preamble: |-
+  # raw/ INDEX — source catalog
+
+  Every file in `raw/` is registered here. Sources are **immutable** — never edited, only
+  superseded. If this wiki was **seeded** from a parent program's catalog, the Provenance
+  column points at the master entry (id + version/date). See `HUB.md`.
+entries:
+  - id: prd-v1
+    source_raw: |-
+      `prd-v1.pdf`
+    added: `<date>`
+    provenance: |-
+      `<author/system it came from; or master catalog id if seeded>`
+    notes: |-
+      —
+    title: |-
+      prd-v1.pdf
+    level: project
+    version: v1
+appendix: |-
+  ## Incoming
+
+  Unsure where a source belongs? Park it in `raw/_incoming/` and note it here until routed.
